@@ -10,7 +10,7 @@
                     <div class="icon-area">
                         <span title="点击复制"><t-icon name="file-copy" class="icon-area-icon" @click="copy"></t-icon></span>
                     </div>
-                    <jsonView :data="targetVal" deep="5"></jsonView>
+                    <jsonView :data="targetVal" :deep="5"></jsonView>
                 </div>
 
             </t-col>

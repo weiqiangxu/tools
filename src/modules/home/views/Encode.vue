@@ -70,7 +70,7 @@ export default {
 
 <style lang="less">
 .t-textarea__inner {
-    min-height: 600px !important;
+    min-height: 550px !important;
 }
 </style>
 

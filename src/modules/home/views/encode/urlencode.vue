@@ -2,7 +2,7 @@
     <div style="padding: 20px">
         <t-textarea class="mb10" autofocus v-model="content" placeholder="请输入需编码的文本"></t-textarea>
 
-        <div style="text-align: right;">
+        <div style="text-align: right;margin-top: 15px">
             <t-button style="margin-left: 20px" theme="primary" variant="base" @click="urlencode">UrlEncode</t-button>
             <t-button style="margin-left: 20px" theme="primary" variant="base" @click="urldecode">UrlDecode</t-button>
             <t-button style="margin-left: 20px" theme="primary" variant="outline" @click="copy">复制到剪切板</t-button>
