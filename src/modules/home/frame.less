@@ -1,0 +1,28 @@
+// ------------------ 框架样式重写
+
+
+/******  tdesign 样式重写   *****/
+
+
+
+/*********************设置滚动条样式 start*************************/
+/* 设置滚动条的样式 */
+::-webkit-scrollbar {
+  width:8px;
+  height:8px;
+}
+/* 滚动槽 */
+::-webkit-scrollbar-track {
+  /*-webkit-box-shadow:inset 0 0 1px rgba(0,0,0,0.1);*/
+  border-radius:10px;
+}
+/* 滚动条滑块 */
+::-webkit-scrollbar-thumb {
+  border-radius:10px;
+  /*-webkit-box-shadow:inset 0 0 1px rgba(0,0,0,0.1);*/
+  background:rgba(227,229,234,0.4) !important; // manage scrollbar thumb background color here
+}
+::-webkit-scrollbar-thumb:window-inactive {
+  background:rgba(227,229,234,0.4);
+}
+/*********************设置滚动条样式 end*************************/
