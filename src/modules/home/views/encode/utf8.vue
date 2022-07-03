@@ -1,7 +1,7 @@
 <template>
     <div style="padding: 20px">
-        <t-row :gutter="16">
-            <t-col :span="6">
+        <t-row justify="space-between">
+            <t-col :span="5">
                 <div>
                     <t-textarea class="mb10" autofocus v-model="encodeContent" placeholder="请输入需编码的文本"></t-textarea>
                 </div>
@@ -10,7 +10,7 @@
                 <div><t-textarea class="mb10" autofocus v-model="decodeContent" placeholder="请输入需解码的文本"></t-textarea></div>
             </t-col>
         </t-row>
-        <div style="text-align: right;">
+        <div style="text-align: right;margin-top:15px">
             <t-button style="margin-left: 20px" theme="primary" variant="base" @click="encode">UTF8Encode</t-button>
             <t-button style="margin-left: 20px" theme="primary" variant="base" @click="decode">UTF8Decode</t-button>
             <t-button style="margin-left: 20px" theme="primary" variant="outline" @click="copy">复制到剪切板</t-button>

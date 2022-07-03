@@ -1,7 +1,7 @@
 <template>
     <div style="padding: 20px">
-        <t-row :gutter="16">
-            <t-col :span="6">
+        <t-row justify="space-between">
+            <t-col :span="5">
                 <div>
                     <t-textarea class="mb10" autofocus v-model="sourecContent" placeholder="请把你需要转换的内容粘贴在这里"></t-textarea>
                 </div>
@@ -10,7 +10,7 @@
                 <div><t-textarea class="mb10" autofocus v-model="targetContent" placeholder="转换后的结果"></t-textarea></div>
             </t-col>
         </t-row>
-        <div style="text-align: right;">
+        <div style="text-align: right;margin-top:15px;">
             <t-button style="margin-left: 20px" theme="primary" variant="base" @click="asciiToUnicode">ASCII转Unicode</t-button>
             <t-button style="margin-left: 20px" theme="primary" variant="base" @click="UnicodeToAscii">Unicode转ASCII</t-button>
             <t-button style="margin-left: 20px" theme="primary" variant="base" @click="UnicodeToCh">Unicode转中文</t-button>

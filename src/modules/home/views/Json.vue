@@ -1,21 +1,19 @@
 <template>
-    <div>
-        <t-row class="json-area">
-            <t-col class="json-left" :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
-                <t-textarea class="src-textarea" v-model="srcVal" placeholder="请输入待解析的json内容" autofocus @change="handleSrcChange"></t-textarea>
-            </t-col>
-            <t-col class="json-right" :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
-                <span v-if="error" style="color: #f01" v-html="error"></span>
-                <div  style="height: 100%; overflow: auto"  v-else-if="targetVal">
-                    <div class="icon-area">
-                        <span title="点击复制"><t-icon name="file-copy" class="icon-area-icon" @click="copy"></t-icon></span>
-                    </div>
-                    <jsonView :data="targetVal" :deep="5"></jsonView>
-                </div>
-
-            </t-col>
-        </t-row>
-    </div>
+    <t-row justify="space-between">
+        <t-col class="json-left" :xs="5" :sm="5" :md="5" :lg="5" :xl="5">
+            <t-textarea class="src-textarea" v-model="srcVal" placeholder="请输入待解析的json内容" 
+            autofocus @change="handleSrcChange"></t-textarea>
+        </t-col>
+        <t-col class="json-right" :xs="6" :sm="6" :md="6" :lg="6" :xl="6">
+            <span v-if="error" style="color: #f01" v-html="error"></span>
+            <t-row style="height:90vh; overflow: auto;background-color: rgb(255, 255, 255);"  v-else>
+                <jsonView style="height:100%" :data="targetVal" :deep="5"></jsonView>
+            </t-row>
+                <t-row style="text-align: right;margin-top: 15px">
+                <t-button style="margin-left: 20px" theme="primary" variant="outline" @click="copy">复制到剪切板</t-button>
+            </t-row>
+        </t-col>
+    </t-row>
 </template>
 
 <script>
@@ -29,7 +27,7 @@ export default {
         return {
             containerH: '100vh',
             srcVal: '',
-            targetVal: '',
+            targetVal: {},
             error: '',
         };
     },
@@ -94,27 +92,26 @@ export default {
         height: 100%;
     }
     .json-area {
-        height: 100%;
+        height: 90vh;
         width: 100%;
         text-align: center;
         overflow: auto;
     }
     .json-left {
-        height: 100%;
+        height: 90vh;
         border: 1px solid #E3E5EA;
-        padding: 10px;
+        padding: 0px;
     }
     .json-right {
-        padding: 10px;
+        padding: 2px;
         text-align: left;
-        height: 100%;
+        height: 90vh;
         border: 1px solid #E3E5EA;
     }
     .src-textarea {
         font-size: 16px;
         width: 100%;
-        max-height: 100%;
-        height:100%;
+        height:90vh;
         border-radius:0;
         resize: none;
         outline:none;
