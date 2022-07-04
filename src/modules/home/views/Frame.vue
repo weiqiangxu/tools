@@ -18,7 +18,7 @@
                         </keep-alive>
                     </transition>
                 </t-content>
-                <t-footer>Copyright @ 2019-{{new Date().getFullYear()}} Tencent. All Rights Reserved</t-footer>
+                
             </t-layout>
         </t-layout>
     </div>

@@ -12,6 +12,11 @@ import router from './routers'
 Vue.config.productionTip = true
 Vue.use(VueRouter);
 
+
+import JsonViewer from 'vue-json-viewer';
+// Import JsonViewer as a Vue.js plugin
+Vue.use(JsonViewer);
+
 import VueBus from 'vue-bus';
 Vue.use(VueBus);
 import { library } from '@fortawesome/fontawesome-svg-core'

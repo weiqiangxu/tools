@@ -1,19 +1,19 @@
 <template>
     <div class="urlencode-main" style="padding: 20px">
         <t-row :gutter="16">
-            <t-col :span="6">
+            <t-col :span="5">
                 <div>
                     <t-textarea class="mb10" autofocus v-model="content" placeholder="请把你需要转换的内容粘贴在这里"></t-textarea>
                 </div>
             </t-col>
             <t-col :span="6">
                 <div><t-textarea class="mb10" autofocus v-model="md5Str" placeholder="转换后的结果"></t-textarea></div>
+                <div style="text-align: right;margin-top:15px;">
+                    <t-button style="margin-left: 20px" theme="primary" variant="base" @click="handlerMd5Click">加密</t-button>
+                    <t-button style="margin-left: 20px" theme="primary" variant="outline" @click="copy">复制到剪切板</t-button>
+                </div>
             </t-col>
         </t-row>
-        <div style="text-align: right;">
-            <t-button style="margin-left: 20px" theme="primary" variant="base" @click="handlerMd5Click">加密</t-button>
-            <t-button style="margin-left: 20px" theme="primary" variant="outline" @click="copy">复制到剪切板</t-button>
-        </div>
     </div>
 </template>
   
