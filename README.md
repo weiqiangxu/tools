@@ -1,6 +1,6 @@
 # 工具类
 
-### 启动项目
+### 调试项目
 
 ```
 
@@ -20,4 +20,12 @@ npm run server
 npm uninstall vue-template-compiler
 
 npm install vue-template-compiler@2.6.14
+```
+
+### 启动项目
+
+```
+cd release && ./main.exe // windows
+
+cd release && ./main // linux
 ```
